@@ -73,7 +73,7 @@ server <- function(input, output) {
     
     ggplot(data = df()) +
       geom_histogram(mapping = aes(x = value), color = "black", fill = "lightgreen", bins = 100) +
-      labs(x = "Value", y = "Frequency") +
+      labs(x = "Value", y = "Frequency", title = "Histogram") +
       # geom_vline(mapping = aes(xintercept = mean(df()$value)), color = "red")+
       # geom_vline(mapping = aes(xintercept = median(df()$value)), color = "blue", linetype = 3) +
       xlim(c(-100, 100))
@@ -85,7 +85,7 @@ server <- function(input, output) {
     ggplot(data = df()) +
       geom_boxplot(mapping = aes(x = value), color = "black", fill = "lightgreen") +
       theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) +
-      labs(x = "Value", y = "") +
+      labs(x = "Value", y = "", title = "Boxplot") +
       xlim(c(-100, 100))
     
   })
