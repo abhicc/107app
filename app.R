@@ -1,3 +1,4 @@
+library(fGarch)
 library(sn)
 library(tidyverse)
 library(mosaic)
